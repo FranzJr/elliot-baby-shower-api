@@ -1,0 +1,43 @@
+{
+  "info": {
+    "_postman_id": "fbde9b9d-7a9b-42c8-8fe0-ea892b7f2fa5",
+    "name": "BabyShower Gift Create",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Gift",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://70wibv14m7.execute-api.us-east-1.amazonaws.com/dev/babyshower/gift/create",
+          "protocol": "https",
+          "host": [
+            "70wibv14m7",
+            "execute-api",
+            "us-east-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "babyshower",
+            "gift",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

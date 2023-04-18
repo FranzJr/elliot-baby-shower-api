@@ -1,0 +1,30 @@
+{
+  "name": "elliot-baby-shower-api",
+  "version": "1.0.0",
+  "description": "API :: ES: Invitación Baby Shower Elliot: Web para confirmar asistencia, elegir regalos y almacenar información en Google Sheets - EN: Elliot's Baby Shower Invite: Webpage for RSVP, gift selection, and storing info in Google Sheets - JP: エリオットのベビーシャワー招待: 参加確認・ギフト選択のウェブ、情報はGoogleシートに保存 - CH: 艾略特宝宝派对邀请：确认出席、选择礼物的网页，信息存储在Google表格",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranzJr/elliot-baby-shower-api.git"
+  },
+  "author": "FranzJr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranzJr/elliot-baby-shower-api/issues"
+  },
+  "homepage": "https://github.com/FranzJr/elliot-baby-shower-api#readme",
+  "dependencies": {
+    "aws-serverless-express": "^3.4.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^5.2.0",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^12.0.4"
+  }
+}

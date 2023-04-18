@@ -1,0 +1,227 @@
+{
+    "info": {
+        "_postman_id": "f8ca2a3a-872f-4c62-827a-1d81639c1a67",
+        "name": "Babyshower Service",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Check Guest",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://70wibv14m7.execute-api.us-east-1.amazonaws.com/dev/babyshower/guest/check",
+                    "protocol": "https",
+                    "host": [
+                        "70wibv14m7",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "babyshower",
+                        "guest",
+                        "check"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Guest",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"Name\": \"John Doe\",\n    \"Phone\": \"1234567890\",\n    \"Email\": \"john.doe@example.com\",\n    \"MoreGuest\": 2,\n    \"SelectedGift\": \"Toy\",\n    \"Assist\": true,\n    \"Event\": \"1\"\n}"
+                },
+                "url": {
+                    "raw": "https://70wibv14m7.execute-api.us-east-1.amazonaws.com/dev/babyshower/guest/create",
+                    "protocol": "https",
+                    "host": [
+                        "70wibv14m7",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "babyshower",
+                        "guest",
+                        "create"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Gift",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"Name\": \"Toy\",\n    \"Category\": \"Kids\",\n    \"Amount\": 1,\n    \"Money\": 10.0\n}"
+                },
+                "url": {
+                    "raw": "https://70wibv14m7.execute-api.us-east-1.amazonaws.com/dev/babyshower/gift/create",
+                    "protocol": "https",
+                    "host": [
+                        "70wibv14m7",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "babyshower",
+                        "gift",
+                        "create"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Guest",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"_id\": \"guest_id_here\",\n    \"Name\": \"Jane Doe\",\n    \"Phone\": \"0987654321\",\n    \"Email\": \"jane.doe@example.com\",\n    \"MoreGuest\": 1,\n    \"SelectedGift\": \"Toy\",\n    \"Assist\": true,\n    \"Event\": \"1\"\n}"
+                },
+                "url": {
+                    "raw": "https://70wibv14m7.execute-api.us-east-1.amazonaws.com/dev/babyshower/guest/update",
+                    "protocol": "https",
+                    "host": [
+                        "70wibv14m7",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "babyshower",
+                        "guest",
+                        "update"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Gift",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"_id\": \"gift_id_here\",\n    \"Name\": \"Updated Toy\",\n    \"Category\": \"Kids\",\n    \"Amount\": 1,\n    \"Money\": 15.0\n}"
+                },
+                "url": {
+                    "raw": "https://70wibv14m7.execute-api.us-east-1.amazonaws.com/dev/babyshower/gift/update",
+                    "protocol": "https",
+                    "host": [
+                        "70wibv14m7",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "babyshower",
+                        "gift",
+                        "update"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "List Gifts",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://70wibv14m7.execute-api.us-east-1.amazonaws.com/dev/babyshower/gift/list",
+                    "protocol": "https",
+                    "host": [
+                        "70wibv14m7",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "babyshower",
+                        "gift",
+                        "list"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Event",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://70wibv14m7.execute-api.us-east-1.amazonaws.com/dev/babyshower/event/{{idEvent}}",
+                    "protocol": "https",
+                    "host": [
+                        "70wibv14m7",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "babyshower",
+                        "event",
+                        "{{idEvent}}"
+                    ],
+                    "variable": [
+                        {
+                            "key": "idEvent",
+                            "value": "1"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "protocolProfileBehavior": {}
+}

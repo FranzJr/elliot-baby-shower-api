@@ -1,0 +1,57 @@
+service: babyshower-service
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  environment:
+    MONGODB_URI: 'URL' 
+functions:
+  checkGuest:
+    handler: handler.checkGuest
+    events:
+      - http:
+          path: babyshower/guest/check
+          method: get
+          request:
+            parameters:
+              querystrings:
+                id: true
+  createGuest:
+    handler: handler.createGuest
+    events:
+      - http:
+          path: babyshower/guest/create
+          method: post
+  createGift:
+    handler: handler.createGift
+    events:
+      - http:
+          path: babyshower/gift/create
+          method: post
+  updateGuest:
+    handler: handler.updateGuest
+    events:
+      - http:
+          path: babyshower/guest/update
+          method: put
+  updateGift:
+    handler: handler.updateGift
+    events:
+      - http:
+          path: babyshower/gift/update
+          method: put
+  listGifts:
+    handler: handler.listGifts
+    events:
+      - http:
+          path: babyshower/gift/list
+          method: get
+  getEvent:
+    handler: handler.getEvent
+    events:
+      - http:
+          path: babyshower/event/{idEvent}
+          method: get
+plugins:
+  - serverless-offline
